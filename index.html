@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Рабочий план дисциплин</title>
+        <!--  Подключаем jquery для работы наших JS скриптов -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+
+        <!--  Подключаем фреймворк bootstrap для работы с его стилями -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="#">Рабочий план дисциплин</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                              <a class="nav-link" id="disc_link" href="#">Дисциплины <span class="sr-only">(current)</span></a>
+                            </li>
+                            
+                          </ul>
+                          <div class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" id="title_discipl_add" type="text" placeholder="Название дисциплины">
+                            <button class="btn btn-outline-success my-2 my-sm-0 add_discipl">Добавить</button>
+                          </div>
+                        </div>
+                      </nav>
+        </header>
+        <main class="mt-2">
+            <div class="container">
+                <div class="d-none" id="discipl_block">
+                        <table class="table table-hover">
+                                <tbody id="discipl_table">
+                                  
+                                  
+                                </tbody>
+                              </table>
+                </div>
+                <div class="d-none" id="tasks_block">
+                        <h1 class="mb-4" >Дисциплина: <span id="discipl_name"></span></h1>                        
+                        <caption class="mb-2">
+                                <span>
+                                    Всего часов: <span class="all_t"></span> 
+                                </span>
+                                <span>
+                                    ( лекционных <span class="lec_t"></span>,
+                                </span>
+                                <span>
+                                     лабораторных <span class="lab_t"></span>,
+                                </span>
+                                <span>
+                                    самостоятельных <span class="work_t"></span>,
+                                </span>
+                                <span>
+                                    практических <span class="practice_t"></span> )
+                                </span>
+                            </caption>
+                        <table class="table">   
+                                <thead>
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Разделы дисциплины</th>
+                                    <th scope="col">Лекционные часы</th>
+                                    <th scope="col">Лабораторные часы</th>
+                                    <th scope="col">Самостоятельные часы</th>
+                                    <th scope="col">Практические часы</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tasks_table">
+                                                           
+                                </tbody>
+                        </table>
+                </div>
+                <div class="d-none" id="editTasks_block">
+                        <h1 class="mb-4" >Дисциплина: <input id="discipl_name_edit" value=""><button class="ml-3 btn btn-outline-success task_name_edit">Изменить</button></h1>                        
+                        <caption class="mb-2">
+                            <span>
+                                Всего часов: <span class="all_t"></span> 
+                            </span>
+                            <span>
+                                ( лекционных <span class="lec_t"></span>,
+                            </span>
+                            <span>
+                                 лабораторных <span class="lab_t"></span>,
+                            </span>
+                            <span>
+                                самостоятельных <span class="work_t"></span>,
+                            </span>
+                            <span>
+                                практических <span class="practice_t"></span> )
+                            </span>
+                        </caption>
+                        <table class="table-sm">   
+                                <thead>
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Разделы дисциплины</th>
+                                    <th scope="col">Лекционные часы</th>
+                                    <th scope="col">Лабораторные часы</th>
+                                    <th scope="col">Самостоятельные часы</th>
+                                    <th scope="col">Практические часы</th>
+                                    <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tasks_table_edit">
+                                                           
+                                </tbody>
+                        </table>
+                </div>
+            </div>
+        </main>        
+    </body>
+</html>
